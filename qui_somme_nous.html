@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entête et Diaporama avec Bootstrap</title>
+  <!-- Liens vers Bootstrap et Font Awesome -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Styles pour l'en-tête */
+    .header {
+      background-color: orange;
+      padding: 10px;
+    }
+    .header ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .header ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    /* Styles pour le menu */
+    .menu-section {
+      background-color: red;
+      padding: 10px;
+    }
+    .menu-section .navbar-brand {
+      margin-right: auto;
+    }
+    .menu-section .navbar-nav {
+      margin-left: auto;
+    }
+    .nav-item a:hover{
+      color: #007bff;
+    }
+    /* Styles pour le diaporama */
+    .slideshow {
+      width: 100%;
+      height: 497px;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .slide-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+    .slide-content h2 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .slide-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .slide-content .btn {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .slide-content .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Style pour la section de témoignage */
+.testimonial-section {
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond */
+  padding: 50px 0; /* Espacement intérieur */
+}
+
+.testimonial-section h2 {
+  color: #007bff; /* Couleur du texte */
+  font-size: 36px; /* Taille de la police */
+}
+.testimonial-section p {
+    color: #fff;
+}
+
+.testimonial-text {
+  font-size: 18px; /* Taille de la police */
+  line-height: 1.6; /* Hauteur de ligne */
+  text-align: justify; /* Alignement du texte */
+}
+
+   
+    </style>
+
+<body>
+
+    <!-- En-tête -->
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li><i class="fas fa-building"></i> +228 70-44-81-06</li>
+            <li><i class="far fa-envelope"></i> gregoire8@gmail.com</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark menu-section">
+      <div class="container">
+        <a class="navbar-brand" href=""><i class="fas fa-handshake"></i> <span>E</span>sso-plus</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class="fas fa-home"></i> L’Accueil</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="qui_somme_nous.html"><i class="fas fa-users"></i> Qui sommes-nous</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="nos_offres.html"><i class="fas fa-shopping-cart"></i> Nos Offres</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Diaporama -->
+<div class="slideshow">
+    <div class="slide active" style="background-image: url('a3.jpg');">
+      <div class="slide-content">
+        <h2>Qui sommes-nous ?</h2>
+        <p> Decouvrer les affinite de notre entreprise</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Division pour Notre mission et Notre vision -->
+<div class="testimonial-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2><i class="fas fa-bullseye"></i> Notre Mission</h2>
+          <p>
+            Contribuer à l'amélioration des conditions de vie des populations, en majorité les femmes, menant des activités économiques en zone urbaines et rurales du Togo en leur offrant des services financiers et non financiers.
+          </p>
+        </div>
+        <div class="col-md-12 text-center">
+          <h2><i class="fas fa-eye"></i> Notre Vision</h2>
+          <p>
+            Devenir une institution de Microfinance pérenne et modèle au Togo et participer de manière active au développement socioéconomique de la communauté de base.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <!-- Section "Rejoignez le meilleur de la microfinance" -->
+<div class="join-section text-center py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <h2><i class="fas fa-handshake"></i> Rejoignez le meilleur de l'entreprise prestataire de service</h2>
+          <p>Rejoignez le meilleur entreprise prestataire de service au Togo en souscrivant aux produits et services.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <a href="nos_offres.html" class="btn btn-primary"><i class="fas fa-search"></i> Découvrir nos offres</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Logo et présentation de l'entreprise -->
+        <div class="col-md-4">
+          <h4><a class="navbar-brand" href=""><i class="fas fa-handshake"></i> <span>E</span>sso-plus</a></h4>
+          <p>Présentation de l'entreprise</p>
+        </div>
+        <!-- Localisation de l'entreprise -->
+        <div class="col-md-4">
+          <h4>Localisation</h4>
+          <p>Adresse de l'entreprise<br>
+          Division de l'entreprise</p>
+        </div>
+        <!-- Liens de raccourci du menu et plus d’information -->
+        <div class="col-md-4">
+          <h4>Liens rapides</h4>
+          <ul class="list-unstyled">
+            <li><a href="qui_somme_nous.html" class="text-white">Qui sommes-nous</a></li>
+            <li><a href="nos_offres.html" class="text-white">Nos Offres</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Copyright -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <p class="text-center m-0 copyright-text">Copyright 2024 <a href="#" class="text-white">ATG Gregoire</a> Formation Kevine. Tous droits réservés.</p>
+      </div>
+    </div>
+  </div>
+  <style>
+    .copyright-text {
+      font-size: 14px;
+      color: #ccc; /* Couleur différente de celle du texte principal */
+    }
+  </style>
+  
+  </footer>
+  
+
+  
